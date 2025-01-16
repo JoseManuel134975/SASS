@@ -1,0 +1,27 @@
+$width-container: 80%;
+$width-img: 100%;
+
+$color-nav: #670d0f;
+$color-link: white;
+$color-link-active: #f01945;
+$color-card: #ffe3c9;
+
+$border-radius: 30px;
+$border-color-card: red;
+
+$box-shadow-card: 0 0 4px black;
+
+
+
+@mixin flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+@mixin gridCards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
