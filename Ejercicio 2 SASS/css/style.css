@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/* Para la forma fácil */
+/* Forma más simple o fácil */
+/* Forma más compleja */
+.box-1 {
+  background-color: rgb(109.0454545455, 139.7727272727, 231.9545454545);
+  border: 1px solid rgb(32.5909090909, 76.0454545455, 206.4090909091);
+}
+
+.box-2 {
+  background-color: rgb(153.0909090909, 174.5454545455, 238.9090909091);
+  border: 1px solid rgb(25.6363636364, 59.8181818182, 162.3636363636);
+}
+
+.box-3 {
+  background-color: rgb(197.1363636364, 209.3181818182, 245.8636363636);
+  border: 1px solid rgb(18.6818181818, 43.5909090909, 118.3181818182);
+}
+
+.box-4 {
+  background-color: rgb(241.1818181818, 244.0909090909, 252.8181818182);
+  border: 1px solid rgb(11.7272727273, 27.3636363636, 74.2727272727);
+}
+
+.box-5 {
+  background-color: white;
+  border: 1px solid rgb(4.7727272727, 11.1363636364, 30.2272727273);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+body .container {
+  display: flex;
+  flex-flow: column wrap;
+}
+body .container div {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  transition: transform 0.75s linear;
+}
+body .container div:hover {
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=style.css.map */

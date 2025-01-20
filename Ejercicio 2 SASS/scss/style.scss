@@ -1,0 +1,59 @@
+$width-box: 100px;
+$height-box: 100px;
+
+$margin-box: 10px;
+
+$bg-color: royalblue;
+
+/* Para la forma fácil */
+// $percentage: 10%;
+// $num-boxes: 5;
+
+/* Forma más simple o fácil */
+// @for $i from 1 through $num-boxes{
+//     .box-#{$i}{
+//         background-color: lighten($color: royalblue, $amount: $i * $percentage);
+//         border: 1px solid darken($color: royalblue, $amount: $i * $percentage);
+//     }
+// }
+
+/* Forma más compleja */
+$boxes: (1: 10%, 2: 20%, 3: 30%, 4: 40%, 5: 50%);
+
+@each $num, $per in $boxes{
+    .box-#{$num}{
+        background-color: lighten($color: $bg-color, $amount: $per);
+        border: 1px solid darken($color: $bg-color, $amount: $per);
+    }
+}
+
+
+
+
+
+*{
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+
+    & .container{
+        display: flex;
+        flex-flow: column wrap;
+
+        & div{
+            width: $width-box;
+            height: $height-box;
+            margin-bottom: $margin-box;
+            transition: transform 0.75s linear;
+
+            &:hover{
+                transform: scale(1.1)
+            }
+        }
+    }
+}
